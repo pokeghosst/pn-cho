@@ -1,0 +1,25 @@
+# Laszlo Sragner
+# https://laszlo.substack.com/p/cq4ds-python-project-from-scratch
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/python-poetry/poetry
+    rev: "1.5.1"
+    hooks:
+      - id: poetry-check
+  - repo: local
+    hooks:
+      - id: black
+        name: black
+        entry: poetry run black src
+        language: system
+        types: [python]
+      - id: ruff
+        name: ruff
+        entry: poetry run ruff format src
+        language: system
+        types: [python]

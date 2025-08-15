@@ -1,0 +1,54 @@
+[project]
+name = "pn-cho"
+version = "0.1.0"
+description = "A library for testing pseudo-noise (PN) sequences."
+authors = [
+    {name = "pokeghost",email = "pokeghost@disroot.org"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "pn_sequence", from = "src"}]
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+pytest-coverage = "^0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+pre-commit = "^4.1.0"
+ruff = "^0.10.0"
+
+# Laszlo Sragner
+# https://laszlo.substack.com/p/cq4ds-python-project-from-scratch
+
+[tool.black]
+skip-string-normalization = true
+line-length = 120
+
+[tool.ruff]
+# Same as Black.
+line-length = 120
+
+[lint]
+select = [
+    "E",  # pycodestyle errors (settings from FastAPI, thanks, @tiangolo!)
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "C901",  # too complex
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
