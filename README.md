@@ -1,8 +1,8 @@
 # pn-cho
 
 [![PyPI - Version](https://img.shields.io/pypi/v/pn-cho)](https://pypi.org/project/pn-cho/)
-[![GitHub License](https://img.shields.io/github/license/pokeghost/pn-cho)](/COPYING.LESSER)
-[![GitHub Release](https://img.shields.io/github/v/release/pokeghost/pn-cho)](https://github.com/pokeghost/pn-cho/releases)
+[![GitHub License](https://img.shields.io/github/license/pokeghosst/pn-cho)](/COPYING.LESSER)
+[![GitHub Release](https://img.shields.io/github/v/release/pokeghosst/pn-cho)](https://github.com/pokeghosst/pn-cho/releases)
 
 > A Python library for testing pseudo-noise sequences
 
